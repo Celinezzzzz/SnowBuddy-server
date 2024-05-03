@@ -13,6 +13,8 @@ exports.up = function(knex) {
         table.integer('base_altitude').notNullable();
         table.integer('summit_altitude').notNullable();
         table.integer('vertical').notNullable();
+        table.decimal('latitude', 10, 6);
+        table.decimal('longitude', 10, 6);
         table.string('website').notNullable();
         table.string('map_url').notNullable();
         table.timestamp('created_at').defaultTo(knex.fn.now());
