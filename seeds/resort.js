@@ -19,7 +19,7 @@ exports.seed = async function(knex) {
       latitude: 50.10375,
       longitude: 122.91353,
       website: 'https://www.whistlerblackcomb.com/',
-      map_url: 'https://www.whistlerblackcomb.com/-/aemasset/sitecore/whistler-blackcomb/maps/20231020_WB_Winter_DigitalTrailMap_001.pdf',
+      map_url: 'https://lift.opensnow.com/trail-maps/cawhistler_23_2021-01-22-10-53-29_full.jpg',
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ exports.seed = async function(knex) {
       latitude: 50.3598,
       longitude: 119.0589,
       website: 'https://www.skisilverstar.com/',
-      map_url: 'https://cms.skisilverstar.com/sites/default/files/2023-11/202324SilverStar-AlpineMap-Final.jpg?_ga=2.47400676.230939685.1713914259-1359093273.1713914257',
+      map_url: 'https://lift.opensnow.com/trail-maps/casilverstar_227_2021-01-22-11-22-46_full.jpg',
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ exports.seed = async function(knex) {
       latitude: 49.40093,
       longitude: 123.19856,
       website: 'https://cypressmountain.com/',
-      map_url: 'https://cypressmountain.com/Documents/Cypress/Trail%20Map%20PDFs/2023.24/Downhill%20Map%20WEB-a_13315.pdf',
+      map_url: 'https://lift.opensnow.com/trail-maps/cacypress_136_2020-11-23-11-27-29_full.jpg',
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ exports.seed = async function(knex) {
       latitude: 50.8837,
       longitude: 119.8891,
       website: 'https://www.sunpeaksresort.com/',
-      map_url: 'https://www.sunpeaksresort.com/sites/default/files/inline-files/2023%20Alpine%20Map_Web_0.pdf',
+      map_url: 'https://lift.opensnow.com/trail-maps/casunpeaks_208_2021-01-22-10-53-29_full.jpg',
     },
     {
       id: 5,
@@ -79,7 +79,7 @@ exports.seed = async function(knex) {
       latitude: 49.73556,
       longitude: 118.95083,
       website: 'https://www.bigwhite.com/',
-      map_url: 'https://www.bigwhite.com/sites/default/files/inline-files/BigWhite-2023-FINAL-36x24in-min.pdf',
+      map_url: 'https://lift.opensnow.com/trail-maps/cabigwhite_211_2022-12-05-05-15-02_full.jpg',
     },
   ]);
 };

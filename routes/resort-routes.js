@@ -7,7 +7,7 @@ router.route("/")
 
 // Route for getting a single resort by ID
 router.route('/:id')
-    .get(resortController.getResortItemById)
+    .get(resortController.getOneResort)
 
 // Route for getting weather info by resort ID
 router.get('/:id/weather', resortController.getResortAndWeather);

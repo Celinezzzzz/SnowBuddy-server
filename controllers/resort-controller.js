@@ -14,17 +14,24 @@ const getAllResortItems = async (_req, res) => {
 };
 
 //GET single resort
-const getResortItemById = async (id) => {
+const getOneResort = async (req, res) => {
     try {
-        const foundId = await knex("resorts")
-            .where({ id })
-            .first();
-        return foundId;
+      const resortId = req.params.id;
+      const resortFound = await knex("resorts")
+        .select("*")
+        .where("id", resortId)
+        .first();
+  
+      if (!resortFound) {
+        return res.status(404).json({ error: "Resort not found" });
+      }
+  
+      res.status(200).json(resortFound);
     } catch (error) {
-        console.error("Error retrieving single resort:", error);
-        throw new Error(`Error retrieving single resort: ${error}`);
+      console.error("Error retrieving single resort:", error);
+      res.status(500).json({ error: "Internal Server Error" });
     }
-};
+  };
 
 // Function to fetch weather data by coordinates
 const getWeatherForecast = async (latitude, longitude) => {
@@ -35,6 +42,18 @@ const getWeatherForecast = async (latitude, longitude) => {
     } catch (error) {
         console.error("Error fetching weather data:", error);
         throw new Error("Error fetching weather data from the API");
+    }
+};
+
+const getResortItemById = async (id) => {
+    try {
+        const foundId = await knex("resorts")
+            .where({ id })
+            .first();
+        return foundId;
+    } catch (error) {
+        console.error("Error retrieving single resort:", error.message);
+        throw new Error("Error retrieving single resort.");
     }
 };
 
@@ -73,5 +92,6 @@ const getResortAndWeather = async (req, res) => {
 module.exports = {
     getAllResortItems,
     getResortItemById,
+    getOneResort,
     getResortAndWeather,
 };
