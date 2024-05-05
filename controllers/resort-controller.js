@@ -3,15 +3,17 @@ const knex = require("knex")(require("../knexfile"));
 require("dotenv").config();
 
 //GET all resorts
-const getAllResortItems = async (_req, res) => {
+const getAllResortItems = async (req, res) => {
+    const { sort_by = 'id', order_by = 'asc' } = req.query; 
     try {
-        const data = await knex("resorts");
+        const data = await knex("resorts").orderBy(sort_by, order_by);
         res.status(200).json(data);
     } catch (error) {
         console.error("Error retrieving resorts:", error);
         res.status(400).send(`Error retrieving resorts: ${error}`);
     }
 };
+
 
 //GET single resort
 const getOneResort = async (req, res) => {
