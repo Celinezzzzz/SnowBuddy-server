@@ -13,6 +13,7 @@ const resortRouter = require("./routes/resort-routes");
 const signupRouter = require("./routes/signup-routes");
 const authRouter = require("./routes/auth-routes");
 const profileRouter = require("./routes/profile-routes");
+const logbookRouter = require("./routes/logbook-routes");
 
 
 //middlewares
@@ -24,6 +25,7 @@ app.use("/api/resorts", resortRouter);
 app.use("/api/signup", signupRouter);
 app.use("/api/login", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/logbook", logbookRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
