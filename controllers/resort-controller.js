@@ -70,12 +70,9 @@ const getResortAndWeather = async (req, res) => {
 
         const { latitude, longitude } = resort;
 
-        // Ensure Latitude and Longitude are valid
         if (latitude && longitude) {
-            // Use the fetched coordinates to fetch weather data
             const weatherData = await getWeatherForecast(latitude, longitude);
 
-            // Combine resort info and weather data
             const resortWithWeather = {
                 resortInfo: resort,
                 weatherData,

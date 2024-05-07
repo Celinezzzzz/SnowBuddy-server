@@ -3,7 +3,6 @@
  * @returns { Promise<void> } 
  */
 exports.seed = async function(knex) {
-  // Deletes ALL existing entries
   await knex('resorts').del()
   await knex('resorts').insert([
     {
@@ -69,7 +68,7 @@ exports.seed = async function(knex) {
     {
       id: 5,
       resort_name: 'Big White Ski Resort',
-      city: 'kelowna',
+      city: 'Kelowna',
       province: 'BC',
       country: 'Canada',
       trail_count: '235',
