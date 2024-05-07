@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const knex = require("knex")(require("../knexfile"));
-const authorize = require("../middlewares/auth.middleware"); // Corrected middleware import
+const authorize = require("../middlewares/auth.middleware"); 
 
 // Create a new entry
 router.post("/", authorize, async (req, res) => {
